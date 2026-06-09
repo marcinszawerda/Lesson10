@@ -12,9 +12,12 @@ NIP Rent is an educational, test-driven Python project that demonstrates how to:
 - process JSON-based business data,
 - implement clear service-style logic in a manager class,
 - verify behavior with unit, integration, functional, and performance tests.
+- document code with docstrings and generate API docs with ``pdoc``.
 
 The domain represents apartment rentals: apartments, rooms, tenants, bills,
 transfers, blacklist entries, and apartment events.
+The manager class provides methods to compute settlements, detect debtors,
+validate input integrity, and calculate balances or taxes.
 
 Package structure
 -----------------
@@ -30,6 +33,7 @@ Typical flow:
 2. Create :class:`src.manager.Manager` with these parameters.
 3. Use manager methods to compute settlements, detect debtors, validate input
         integrity, and calculate balances or taxes.
+4. Handle results as needed (e.g., print reports, export summaries).
 
 Data is loaded from JSON files in the ``data/`` directory, then transformed into
 typed model instances. This keeps business operations explicit and easier to
@@ -41,9 +45,11 @@ Highlights
 - Focused manager API for common settlement and validation operations.
 - Clean separation between data schema and business rules.
 - Ready for automatic API documentation with ``pdoc``.
+- Comprehensive test suite covering all layers of functionality.
 
 Authors
 ------
 Łukasz Kułacz - initial implementation, testing, documentation
+Marcin Szawerda - refactoring, performance improvements, additional tests
 
 """
